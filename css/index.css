@@ -1,0 +1,28 @@
+/* body {
+    background: linear-gradient(to right, #D988B9, #BEADFA, #B0578D);
+} */
+*{
+    font-family: 'Onest', sans-serif;
+}
+.card-body:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(62, 65, 62);
+  transition: all ease-in .2s;
+}
+
+.beranda {
+  text-align: justify;
+}
+.beranda .btn {
+  border-radius: 30px;
+}
+
+nav .container-fluid img {
+  border-radius: 50px;
+}
+
+nav .container-fluid a {
+  font-size: 20px;
+}
+
+
