@@ -67,72 +67,80 @@
   </section>
 
   <!-- card-produk -->
-  <section class="toko" id="toko">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
-        <div class="col" data-aos="fade-down" data-aos-delay="300">
-          <div class="card h-100 shadow-lg mb-3 rounded">
-            <!-- produk 1 -->
-            <img src="img/produk1.jpeg" class="card-img-top" alt="..." s />
-            <div class="card-body">
-              <h5 class="card-title">Cheesecake strawbery</h5>
-              <p class="card-text">Harga : Rp. 15.000</p>
-              <a href="produk1.html" class="btn text-light" style="background-color: #54b435">
-                CheckOut
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg>
-              </a>
+  <div class="container mt-5">
+    <div class="row">
+      <!-- produk-1 -->
+        <div class="col-md-4">
+            <div class="card mt-3" data-aos="fade-down" data-aos-delay="300">
+                <img src="img/produk1.jpeg" class="card-img-top" alt="Produk 1">
+                <div class="card-body">
+                    <h5 class="card-title">Cheesecake strawbery</h5>
+                    <p class="card-text">Harga : Rp 15.000</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-danger" onclick="kurangProduk('jumlahProduk1', 'hargaProduk1')">-</button>
+                            <span id="jumlahProduk1" class="text-center mx-3">0</span>
+                            <button type="button" class="btn btn-sm btn-success" onclick="tambahProduk('jumlahProduk1', 'hargaProduk1')">+</button>
+                        </div>
+                        <span id="hargaProduk1">Rp 0</span>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col" data-aos="fade-down">
-          <div class="card h-100 shadow-lg mb-3 rounded">
-            <!-- produk 2 -->
-            <img src="img/produk2.jpeg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Cheesecake oreo</h5>
-              <p class="card-text">Harga : Rp 15.000</p>
-              <a href="produk2.html" class="btn text-light" style="background-color: #54b435">
-                CheckOut
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg>
-              </a>
+
+        <!-- produk 2 -->
+        <div class="col-md-4">
+            <div class="card mt-3" data-aos="fade-down" data-aos-delay="300">
+                <img src="img/produk2.jpeg" class="card-img-top" alt="Produk 2">
+                <div class="card-body">
+                    <h5 class="card-title">Cheesecake oreo</h5>
+                    <p class="card-text">Harga : Rp 15.000</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-danger" onclick="kurangProduk('jumlahProduk2', 'hargaProduk2')">-</button>
+                            <span id="jumlahProduk2" class="text-center mx-3">0</span>
+                            <button type="button" class="btn btn-sm btn-success" onclick="tambahProduk('jumlahProduk2', 'hargaProduk2')">+</button>
+                        </div>
+                        <span id="hargaProduk2">Rp 0</span>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col" data-aos="fade-down">
-          <div class="card h-100 shadow-lg mb-3 rounded">
-            <!-- produk 3 -->
-            <img src="img/produk3.jpeg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Cheesecake matcha</h5>
-              <p class="card-text">Harga : Rp 15.000</p>
-              <a href="produk3.html" class="btn text-light" style="background-color: #54b435">
-                CheckOut
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg>
-              </a>
-            </div>
+
+        <!-- produk-3 -->
+
+        <div class="col-md-4">
+          <div class="card mt-3" data-aos="fade-down" data-aos-delay="300">
+              <img src="img/produk3.jpeg" class="card-img-top" alt="Produk 3">
+              <div class="card-body">
+                  <h5 class="card-title">Cheesecake matcha</h5>
+                  <p class="card-text">Harga : Rp 15.000</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-danger " onclick="kurangProduk('jumlahProduk3', 'hargaProduk3')">-</button>
+                      <span id="jumlahProduk3" class="text-center mx-3" >0</span>
+                      <button type="button" class="btn btn-sm btn-success" onclick="tambahProduk('jumlahProduk3', 'hargaProduk3')">+</button>
+                    </div>
+                    <span id="hargaProduk3">Rp 0</span>
+                  </div>
+              </div>
           </div>
-        </div>
+          
       </div>
     </div>
-  </section>
+    <div class="row">
+      <div class=" col-sm-12 text-center mt-4">
+        <button class="btn btn-primary shadow-lg mb-3 rounded" onclick="kirimPesanan()">Kirim pesanan</button>
+      </div>
+    </div>
+</div>
+
 
   <!-- komentar pelanggan -->
   <section>
     <div class="container mt-5">
       <h2>Komentar Pelanggan <i class="bi bi-chat-text-fill"></i></h2>
-      <form id="commentForm" >
+      <form id="commentForm">
         <div class="mb-3">
           <label for="name" class="form-label">Nama :</label>
           <input type="text" class="form-control" id="name" placeholder="masukan nama" style="width: 55%;" required>
@@ -142,14 +150,14 @@
           <textarea class="form-control" id="comment" rows="3" style="width: 75%;" required></textarea>
         </div>
         <input class="btn btn-primary" type="submit" value="Kirim Komentar">
-        
+
       </form>
-      
+
     </div>
 
     <div class="container mt-4">
       <div id="comments" class="card-body shadow-lg p-3 mb-5 rounded">
-       
+
       </div>
     </div>
   </section>
@@ -191,8 +199,9 @@
   </footer>
   <style>
     .comment {
-        margin-bottom: 30px;
+      margin-bottom: 30px;
     }
+
     .teh {
       cursor: pointer;
     }
@@ -224,6 +233,8 @@
   <script>
     AOS.init();
   </script>
+
+  <script src="produk.js"></script>
 
   <script src="script.js"></script>
 </body>

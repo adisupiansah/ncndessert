@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Produk dengan Tombol Tambah/Kurang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="produk1.jpg" class="card-img-top" alt="Produk 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Produk 1</h5>
+                        <p class="card-text">Deskripsi produk 1.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-danger"
+                                    onclick="kurangProduk('jumlahProduk1', 'hargaProduk1')">-</button>
+                                <span id="jumlahProduk1">0</span>
+                                <button type="button" class="btn btn-sm btn-success"
+                                    onclick="tambahProduk('jumlahProduk1', 'hargaProduk1')">+</button>
+                            </div>
+                            <span id="hargaProduk1">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="produk2.jpg" class="card-img-top" alt="Produk 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Produk 2</h5>
+                        <p class="card-text">Deskripsi produk 2.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-danger"
+                                    onclick="kurangProduk('jumlahProduk2', 'hargaProduk2')">-</button>
+                                <span id="jumlahProduk2">0</span>
+                                <button type="button" class="btn btn-sm btn-success"
+                                    onclick="tambahProduk('jumlahProduk2', 'hargaProduk2')">+</button>
+                            </div>
+                            <span id="hargaProduk2">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 text-center">
+        <button class="btn btn-primary" onclick="kirimPesanan()">Kirim Pesanan</button>
+    </div>
+
+    <script>
+        function tambahProduk(idJumlah, idHarga) {
+            var jumlahElemen = document.getElementById(idJumlah);
+            var hargaElemen = document.getElementById(idHarga);
+            var jumlah = parseInt(jumlahElemen.innerText);
+            var harga = parseInt(hargaElemen.innerText.slice(3));
+            jumlah++;
+            harga = jumlah * 10000; // Ganti dengan harga produk Anda
+
+            jumlahElemen.innerText = jumlah;
+            hargaElemen.innerText = 'Rp ' + harga;
+        }
+
+        function kurangProduk(idJumlah, idHarga) {
+            var jumlahElemen = document.getElementById(idJumlah);
+            var hargaElemen = document.getElementById(idHarga);
+            var jumlah = parseInt(jumlahElemen.innerText);
+            var harga = parseInt(hargaElemen.innerText.slice(3));
+
+            if (jumlah > 0) {
+                jumlah--;
+                harga = jumlah * 10000; // Ganti dengan harga produk Anda
+            }
+
+            jumlahElemen.innerText = jumlah;
+            hargaElemen.innerText = 'Rp ' + harga;
+        }
+
+        function kirimPesanan() {
+            var jumlahProduk1 = document.getElementById('jumlahProduk1').innerText;
+            var hargaProduk1 = document.getElementById('hargaProduk1').innerText;
+            var jumlahProduk2 = document.getElementById('jumlahProduk2').innerText;
+            var hargaProduk2 = document.getElementById('hargaProduk2').innerText;
+
+            var pesan = "Halo, saya ingin membeli:\n";
+            pesan += "Produk 1 sejumlah " + jumlahProduk1 + " dan Produk 2 sejumlah " + jumlahProduk2 + ".\n";
+            pesan += "Total Harga: " + hargaProduk1 + " + " + hargaProduk2 + " = Rp " + (parseInt(hargaProduk1.slice(3)) + parseInt(hargaProduk2.slice(3)));
+
+            window.location.href = "https://api.whatsapp.com/send?phone=6285767389484&text=" + encodeURIComponent(pesan);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
