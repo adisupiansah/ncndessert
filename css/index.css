@@ -27,4 +27,37 @@ nav .container-fluid a {
   font-size: 20px;
 }
 
+.icn {
+  display: none;
+}
+
+.respon {
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 500px){
+  .respon {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffff;
+    z-index: 9;
+    font-weight: 500;
+    
+  }
+  .icn {
+    display: block;
+    margin-bottom: -32px;
+    font-size: 20px;
+  }
+
+  footer {
+    position: relatif;
+    bottom: 0;
+    margin-bottom: 20px;
+    
+  }
+
+}
+
 
